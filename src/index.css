@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased transition-colors duration-300;
+  }
+  body.dark {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+/* Transiciones suaves para modo oscuro */
+body.dark .bg-white {
+  @apply bg-gray-900;
+}
+body.dark .bg-gray-50 {
+  @apply bg-gray-950;
+}
